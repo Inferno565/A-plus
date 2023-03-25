@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".roles"
+    android:background="@drawable/rolebg">
+
+    <ImageView
+        android:id="@+id/student"
+        android:layout_width="250dp"
+        android:layout_height="180dp"
+        android:background="@drawable/img_6"
+        android:layout_marginTop="190dp"
+        android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/studtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif-monospace"
+            android:text="STUDENT"
+            android:layout_below="@id/student"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:textColor="#F4F2F2"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/teacher"
+        android:layout_width="250dp"
+        android:layout_height="180dp"
+        android:background="@drawable/img_1"
+        android:layout_marginTop="70dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/student"/>
+    <TextView
+        android:id="@+id/teachtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif-monospace"
+        android:text="TEACHER"
+        android:layout_below="@id/teacher"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:textColor="#F4F2F2"
+        android:textSize="24dp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

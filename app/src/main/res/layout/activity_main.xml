@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/img_2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView1"
+        android:text="Welcome"
+        android:textSize="50dp"
+        android:id="@+id/txt1"
+        android:textStyle="bold"
+        android:fontFamily="cursive"
+        android:layout_centerInParent="true"/>
+
+    <Button
+        android:id="@+id/loginbtn"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/txt1"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#5488E3"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="LOGIN"
+        android:textAlignment="center"
+        android:textSize="25dp" />
+
+    <Button
+        android:id="@+id/signupbtn"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/loginbtn"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#ED5A48"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="SIGNUP"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        android:onClick=""/>
+
+</RelativeLayout>
