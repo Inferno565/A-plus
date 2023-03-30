@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class teacher_registration extends AppCompatActivity {
+public class activity_student_dash extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_teacher_registration);
+        setContentView(R.layout.activity_student_dash);
     }
 }

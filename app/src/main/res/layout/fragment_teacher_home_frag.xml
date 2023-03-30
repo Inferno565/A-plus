@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".teacher_home_frag">
+
+    <TextView
+        android:layout_width="168dp"
+        android:layout_height="41dp"
+        android:layout_above="@+id/ques"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="73dp"
+        android:layout_marginEnd="230dp"
+        android:layout_marginBottom="41dp"
+        android:fontFamily="cursive"
+        android:text="WELCOME"
+        android:textColor="@color/hint_color"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:typeface="sans" />
+
+    <ImageButton
+        android:id="@+id/ques"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_above="@+id/exam"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="99dp"
+        android:layout_marginEnd="144dp"
+        android:layout_marginBottom="98dp"
+        android:background="@drawable/question" />
+
+    <TextView
+        android:id="@+id/quesText"
+        android:layout_width="164dp"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="127dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginBottom="93dp"
+        android:textColor="@color/hint_color"
+        android:text="View Student Responses"
+        android:textAlignment="center"
+        android:textSize="20dp" />
+
+    <ImageButton
+        android:id="@+id/exam"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="129dp"
+        android:layout_marginBottom="146dp"
+        android:background="@drawable/exam" />
+
+    <TextView
+        android:id="@+id/examText"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/exam"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="86dp"
+        android:layout_marginEnd="103dp"
+        android:layout_marginBottom="46dp"
+        android:textColor="@color/hint_color"
+        android:text="View Questions Assigned"
+        android:textAlignment="center"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/txtbkuname"
+        android:layout_width="wrap_content"
+        android:layout_height="84dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="200dp"
+        android:fontFamily="cursive"
+        android:textColor="@color/hint_color"
+        android:text="Hello , Remember to assign today's task"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>
