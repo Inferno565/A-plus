@@ -33,7 +33,7 @@
 <!--            android:name=".test"-->
 <!--            android:exported="false" />-->
         <activity
-            android:name=".teacher_signup"
+            android:name=".student_signup"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

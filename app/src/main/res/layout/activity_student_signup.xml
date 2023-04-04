@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/grad"
+    tools:context=".student_signup"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <RelativeLayout
         android:layout_width="match_parent"
@@ -48,13 +49,13 @@
                 android:textSize="20dp" />
 
             <EditText
-                android:id="@+id/username"
+                android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/normal_corner"
-                android:hint="Username/Email"
+                android:hint="Email Address"
                 android:singleLine="true"
                 android:textColor="@color/hint_color"
                 android:textColorHint="@color/hint_color"
@@ -74,7 +75,7 @@
                 android:textColorHint="@color/hint_color"
                 android:textSize="20dp" />
             <EditText
-                android:id="@+id/parent_mob_no"
+                android:id="@+id/p_mob_no"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:inputType="phone"
