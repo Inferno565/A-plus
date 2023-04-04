@@ -1,0 +1,18 @@
+Index: app/build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>plugins {\r\n    id 'com.android.application'\r\n}\r\n\r\nandroid {\r\n    namespace 'com.example.aplus'\r\n    compileSdk 33\r\n\r\n    defaultConfig {\r\n        applicationId \"com.example.aplus\"\r\n        minSdk 19\r\n        targetSdk 33\r\n        versionCode 1\r\n        versionName \"1.0\"\r\n\r\n        testInstrumentationRunner \"androidx.test.runner.AndroidJUnitRunner\"\r\n    }\r\n\r\n    buildTypes {\r\n        release {\r\n            minifyEnabled false\r\n            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'\r\n        }\r\n    }\r\n    compileOptions {\r\n        sourceCompatibility JavaVersion.VERSION_1_8\r\n        targetCompatibility JavaVersion.VERSION_1_8\r\n    }\r\n}\r\n\r\ndependencies {\r\n\r\n    implementation 'androidx.appcompat:appcompat:1.6.1'\r\n    implementation 'com.google.android.material:material:1.8.0'\r\n    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'\r\n    testImplementation 'junit:junit:4.13.2'\r\n    androidTestImplementation 'androidx.test.ext:junit:1.1.5'\r\n    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/build.gradle b/app/build.gradle
+--- a/app/build.gradle	(revision 2a784d60c7a0489e63cc4841be26b298b9090c03)
++++ b/app/build.gradle	(date 1680588923805)
+@@ -26,6 +26,7 @@
+         sourceCompatibility JavaVersion.VERSION_1_8
+         targetCompatibility JavaVersion.VERSION_1_8
+     }
++    buildToolsVersion '30.0.3'
+ }
+ 
+ dependencies {

@@ -11,29 +11,29 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
         tools:targetApi="31">
-        <activity
-            android:name=".teacher_dash"
-            android:exported="false" />
-        <activity
-            android:name=".activity_student_dash"
-            android:exported="false" />
-        <activity
-            android:name=".student_signup"
-            android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".teacher_dash"-->
+<!--            android:exported="false" />-->
+<!--        <activity-->
+<!--            android:name=".activity_student_dash"-->
+<!--            android:exported="false" />-->
+<!--        <activity-->
+<!--            android:name=".student_signup"-->
+<!--            android:exported="false" />-->
+<!--        <activity-->
+<!--            android:name=".teacher_signup"-->
+<!--            android:exported="false" />-->
+<!--        <activity-->
+<!--            android:name=".roles"-->
+<!--            android:exported="false" />-->
+<!--        <activity-->
+<!--            android:name=".login"-->
+<!--            android:exported="false" />-->
+<!--        <activity-->
+<!--            android:name=".test"-->
+<!--            android:exported="false" />-->
         <activity
             android:name=".teacher_signup"
-            android:exported="false" />
-        <activity
-            android:name=".roles"
-            android:exported="false" />
-        <activity
-            android:name=".login"
-            android:exported="false" />
-        <activity
-            android:name=".test"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
