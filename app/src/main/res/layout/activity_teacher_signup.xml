@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_1"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:background="@drawable/gradient_1">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".teacher_signup">
+
         <LinearLayout
             android:id="@+id/frame"
             android:layout_width="330dp"
@@ -16,6 +17,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="100dp"
             android:orientation="vertical">
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -30,7 +32,7 @@
                 android:background="@drawable/normal_corner"
                 android:hint="First Name"
                 android:singleLine="true"
-                android:textColor="@color/hint_color"
+                android:textColor="@color/black"
                 android:textColorHint="@color/hint_color"
                 android:textSize="20dp" />
 
@@ -43,20 +45,20 @@
                 android:background="@drawable/normal_corner"
                 android:hint="Last Name"
                 android:singleLine="true"
-                android:textColor="@color/hint_color"
+                android:textColor="@color/black"
                 android:textColorHint="@color/hint_color"
                 android:textSize="20dp" />
 
             <EditText
-                android:id="@+id/username"
+                android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/normal_corner"
-                android:hint="Username/Email"
+                android:hint="Email Address"
                 android:singleLine="true"
-                android:textColor="@color/hint_color"
+                android:textColor="@color/black"
                 android:textColorHint="@color/hint_color"
                 android:textSize="20dp" />
 
@@ -64,13 +66,13 @@
                 android:id="@+id/mob_no"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:inputType="phone"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/normal_corner"
                 android:hint="Phone Number"
+                android:inputType="phone"
                 android:singleLine="true"
-                android:textColor="@color/hint_color"
+                android:textColor="@color/black"
                 android:textColorHint="@color/hint_color"
                 android:textSize="20dp" />
 
@@ -89,7 +91,7 @@
                     android:paddingEnd="20dp"
                     android:password="true"
                     android:singleLine="true"
-                    android:textColor="@color/hint_color"
+                    android:textColor="@color/black"
                     android:textColorHint="@color/hint_color"
                     android:textSize="20dp" />
 
@@ -114,7 +116,7 @@
                 android:paddingEnd="20dp"
                 android:password="true"
                 android:singleLine="true"
-                android:textColor="@color/hint_color"
+                android:textColor="@color/black"
                 android:textColorHint="@color/hint_color"
                 android:textSize="20dp" />
 
@@ -127,14 +129,6 @@
                 android:background="@drawable/gradient"
                 android:text="Sign Up"
                 android:textSize="20dp" />
-
-            <!--        <CheckBox-->
-            <!--            android:layout_width="match_parent"-->
-            <!--            android:layout_height="wrap_content"-->
-            <!--            android:text="Remember Me"-->
-            <!--            android:textSize="20dp"-->
-            <!--            android:layout_marginTop="10dp"-->
-            <!--            android:textColor="#FFFFFF"/>-->
 
         </LinearLayout>
 
