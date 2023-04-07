@@ -7,6 +7,23 @@
     tools:context=".teacher_dash"
     android:background="#D3F3E0">
 
+    <FrameLayout
+        android:id="@+id/frag1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+<!--    <fragment-->
+<!--        android:id="@+id/frag1"-->
+<!--        android:name="com.example.aplus.teacher_home_frag"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent" />-->
+
+<!--    <fragment-->
+<!--        android:id="@+id/frag1"-->
+<!--        android:name="com.example.aplus.teacher_home_frag"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent" />-->
+
+
     <View
         android:layout_width="match_parent"
         android:layout_height="60dp"
@@ -18,8 +35,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:stretchColumns="*" />
-
-    <TableRow
+        <TableRow
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/menu"
@@ -28,6 +44,7 @@
         <ImageButton
             android:layout_width="40dp"
             android:layout_height="40dp"
+            android:id="@+id/bt1"
             android:layout_alignParentBottom="true"
             android:layout_marginLeft="45dp"
             android:background="@drawable/home"
@@ -37,6 +54,7 @@
         <ImageButton
             android:layout_width="40dp"
             android:layout_height="40dp"
+            android:id="@+id/bt2"
             android:layout_alignParentBottom="true"
             android:layout_marginLeft="45dp"
             android:layout_marginBottom="10dp"
@@ -46,20 +64,22 @@
         <ImageButton
             android:layout_width="40dp"
             android:layout_height="40dp"
+            android:id="@+id/bt3"
             android:layout_alignParentBottom="true"
             android:layout_marginLeft="45dp"
             android:background="@drawable/progress"
-            android:tooltipText="Home" >
+            android:tooltipText="Results" >
         </ImageButton>
 
         <ImageButton
             android:layout_width="40dp"
             android:layout_height="40dp"
+            android:id="@+id/bt4"
             android:layout_alignParentBottom="true"
             android:layout_marginLeft="45dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/user"
-            android:tooltipText="Add" />
+            android:tooltipText="Profile" />
 
     </TableRow>
 </RelativeLayout>

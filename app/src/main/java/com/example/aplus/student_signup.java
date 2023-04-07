@@ -3,9 +3,11 @@ package com.example.aplus;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
+import android.text.method.PasswordTransformationMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,6 +15,8 @@ import androidx.appcompat.app.AppCompatActivity;
 public class student_signup extends AppCompatActivity {
     private SQLiteOpenHelper openHelper;
     private SQLiteDatabase sqLiteDatabase;
+    int visiblity ;
+    ImageButton visi;
     private EditText f_name, l_name, class2, email, mob_no, pass, pass_re;
 
     @Override
@@ -30,6 +34,27 @@ public class student_signup extends AppCompatActivity {
         pass = findViewById(R.id.pass);
         pass_re = findViewById(R.id.pass_re);
 
+        visi = (ImageButton) findViewById(R.id.visi);
+        //*********TOGGLE PASSWORD VISIBLITY*********
+        visi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                switch (visiblity) {
+                    case 0:
+                        visi.setImageResource(R.drawable.eye);
+                        pass.setTransformationMethod(new PasswordTransformationMethod());
+                        visiblity = 1;
+                        break;
+
+                    case 1:
+                        visi.setImageResource(R.drawable.view);
+                        pass.setTransformationMethod(null);
+                        visiblity = 0;
+                        break;
+                }
+            }
+        });
+        //*********TOGGLE PASSWORD VISIBLITY*********
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
