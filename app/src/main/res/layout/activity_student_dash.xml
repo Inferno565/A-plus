@@ -6,7 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".activity_student_dash"
     android:background="#F4D5DF">
-
+    <FrameLayout
+        android:id="@+id/frag1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
     <View
         android:layout_width="match_parent"
         android:layout_height="60dp"
@@ -59,6 +62,7 @@
             android:layout_marginLeft="45dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/user"
+            android:id="@+id/bt4"
             android:tooltipText="Add" />
 
     </TableRow>

@@ -30,6 +30,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="75px"
         android:background="#3D5AFE"
+        android:fontFamily="sans-serif-condensed-medium"
         android:text="VIEW"
         android:textColor="@color/hint_color" />
 

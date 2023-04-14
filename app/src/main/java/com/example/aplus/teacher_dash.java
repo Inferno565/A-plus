@@ -14,6 +14,7 @@ public class teacher_dash extends AppCompatActivity {
     addTest test;
     teacher_home_frag frag = new teacher_home_frag();
     result fragre=new result();
+    profile_user pro_fag=new profile_user();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +32,6 @@ public class teacher_dash extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                test.setArguments(intent.getExtras());
                 getSupportFragmentManager().beginTransaction().replace(R.id.frag1, frag).commit();
             }
         });
@@ -39,7 +39,6 @@ public class teacher_dash extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                test.setArguments(intent.getExtras());
                 getSupportFragmentManager().beginTransaction().replace(R.id.frag1, test).commit();
 
             }
@@ -48,8 +47,14 @@ public class teacher_dash extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                test.setArguments(intent.getExtras());
                 getSupportFragmentManager().beginTransaction().replace(R.id.frag1, fragre).commit();
+            }
+        });
+        b4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                getSupportFragmentManager().beginTransaction().replace(R.id.frag1, pro_fag).commit();
             }
         });
     }

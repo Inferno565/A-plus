@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4D5DF"
+    tools:context=".stud_profile">
+
+    <View
+        android:id="@+id/menu"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/bg_student"
+        android:backgroundTint="#EA5455" />
+
+    <ImageView
+        android:id="@+id/imagebg"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignBottom="@id/menu"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="130dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/login" />
+
+    <ImageButton
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignBottom="@id/imagebg"
+        android:layout_toRightOf="@id/imagebg"
+        android:background="@drawable/editing" />
+
+    <TextView
+        android:id="@+id/useText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/menu"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"
+        android:text="Sharif Tasleem"
+        android:textColor="@color/hint_color"
+        android:textSize="30sp" />
+
+    <LinearLayout
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/useText"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/View_email"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/normal_corner"
+            android:drawableLeft="@drawable/baseline_email_24_red"
+            android:editable="false"
+            android:hint="Email/username"
+            android:singleLine="true"
+            android:textColor="@color/hint_color"
+            android:textColorHint="@color/hint_color"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/view_contact"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/normal_corner"
+            android:drawableLeft="@drawable/baseline_local_phone_24_red"
+            android:editable="false"
+            android:hint="Contact"
+            android:singleLine="true"
+            android:textColor="@color/hint_color"
+            android:textColorHint="@color/hint_color"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/view_pass"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/normal_corner"
+            android:drawableLeft="@drawable/baseline_lock_24_red"
+            android:editable="false"
+            android:hint="Password"
+            android:singleLine="true"
+            android:textColor="@color/hint_color"
+            android:textColorHint="@color/hint_color"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/edit"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#ED5A48"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="Edit Info"
+            android:textAlignment="center"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/signout"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/loginbtn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#576CBC"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="Signout"
+            android:textAlignment="center"
+            android:textSize="20dp" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
