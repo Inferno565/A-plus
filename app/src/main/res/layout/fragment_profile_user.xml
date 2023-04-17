@@ -42,7 +42,7 @@
         android:layout_marginTop="30dp"
         android:id="@+id/useText"
         android:textColor="@color/hint_color"
-        android:text="Sharif Tasleem"
+        android:text="hi"
         android:textSize="30sp"/>
     <LinearLayout
         android:layout_width="330dp"
@@ -51,47 +51,35 @@
         android:layout_centerHorizontal="true"
         android:orientation="vertical" >
 
-        <EditText
+        <TextView
             android:id="@+id/View_email"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
-            android:background="@drawable/normal_corner"
-            android:hint="Email/username"
             android:drawableLeft="@drawable/baseline_email_24"
-            android:singleLine="true"
-            android:editable="false"
             android:textColor="@color/hint_color"
             android:textColorHint="@color/hint_color"
             android:textSize="20dp" />
 
-        <EditText
+        <TextView
             android:id="@+id/view_contact"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_centerHorizontal="true"
             android:drawableLeft="@drawable/baseline_local_phone_24"
             android:layout_marginTop="20dp"
-            android:editable="false"
-            android:background="@drawable/normal_corner"
-            android:hint="Contact"
-            android:singleLine="true"
             android:textColor="@color/hint_color"
             android:textColorHint="@color/hint_color"
             android:textSize="20dp" />
 
-        <EditText
+        <TextView
             android:id="@+id/view_pass"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
             android:drawableLeft="@drawable/baseline_lock_24"
-            android:background="@drawable/normal_corner"
-            android:hint="Password"
-            android:editable="false"
-            android:singleLine="true"
             android:textColor="@color/hint_color"
             android:textColorHint="@color/hint_color"
             android:textSize="20dp" />

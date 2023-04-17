@@ -1,5 +1,9 @@
 package com.example.aplus;
 
+import static com.example.aplus.DatabaseHelper.TABLE_2;
+
+import android.content.ContentValues;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
@@ -17,23 +21,22 @@ public class student_signup extends AppCompatActivity {
     private SQLiteDatabase sqLiteDatabase;
     int visiblity ;
     ImageButton visi;
-    private EditText f_name, l_name, class2, email, mob_no, pass, pass_re;
+    private EditText f_name, l_name, email, mob_no,par_mob, pass, pass_re;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_signup);
-//        openHelper = new DatabaseHelper(this);
+        openHelper = new DatabaseHelper(this);
+        sqLiteDatabase = openHelper.getWritableDatabase();
         Button login = findViewById(R.id.login);
-        f_name = findViewById(R.id.f_name);
-        l_name = findViewById(R.id.l_name);
-//        class2 = findViewById(R.id.class2);
-        mob_no = findViewById(R.id.mob_no);
-        email = findViewById(R.id.email);
-//        email = findViewById(R.id.email);
-        pass = findViewById(R.id.pass);
-        pass_re = findViewById(R.id.pass_re);
-
+        f_name = (EditText) findViewById(R.id.f_name);
+        l_name = (EditText)findViewById(R.id.l_name);
+        mob_no =(EditText) findViewById(R.id.mob_no);
+        par_mob=(EditText)findViewById(R.id.p_mob_no);
+        email = (EditText)findViewById(R.id.email);
+        pass = (EditText)findViewById(R.id.pass);
+        pass_re =(EditText) findViewById(R.id.pass_re);
         visi = (ImageButton) findViewById(R.id.visi);
         //*********TOGGLE PASSWORD VISIBLITY*********
         visi.setOnClickListener(new View.OnClickListener() {
@@ -59,54 +62,53 @@ public class student_signup extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 sqLiteDatabase = openHelper.getWritableDatabase();
-                String uname = email.getText().toString();
                 String fname = f_name.getText().toString();
                 String lname = l_name.getText().toString().trim();
-                String std = class2.getText().toString().trim();
                 String phone = mob_no.getText().toString();
                 String femail = email.getText().toString();
+                String parent=par_mob.getText().toString();
                 String val = pass.getText().toString();
                 String cpass = pass_re.getText().toString();
                 if (!validateName() | !validatePassword() | !validatePhoneNo() | !validateEmail() | !validateConfirmpassword()) {
                     return;
                 }
-//                else
-//                {
-////                    insertData(fname,lname,std,phone,femail,uname,val);
-////                    Toast.makeText(RegisterStudent.this, "Registration Successful", Toast.LENGTH_SHORT).show();
-////                    Intent intent= new Intent(RegisterStudent.this, Login.class);
-////                    startActivity(intent);
-//                }
+                else
+                {
+                    insertData(fname,lname,femail,phone,parent,val);
+                    Toast.makeText(getApplicationContext(), "Registration Successful", Toast.LENGTH_SHORT).show();
+//                    Intent intent= new Intent(getApplicationContext(), login.class);
+//                    startActivity(intent);
+                }
             }
         });
 
     }
-//    private Boolean validateUsername()
-//    {
-//        String uname = email.getText().toString();
-//        String noWhiteSpace = "\\A\\w{4,20}\\z";
-//        if (uname.isEmpty())
-//        {
-//            email.setError("Field cannot be empty");
-//            return false;
-//        }
-//        else if (uname.length() >= 15)
-//        {
-//            email.setError("Username too long");
-//            return false;
-//        }
-//        else if (!uname.matches(noWhiteSpace))
-//        {
-//            email.setError("White Spaces are not allowed");
-//            return false;
-//        }
-//        else
-//        {
-//            email.setError(null);
-//            //username.setErrorEnabled(false);
-//            return true;
-//        }
-//    }
+    private Boolean validateUsername()
+    {
+        String uname = email.getText().toString();
+        String noWhiteSpace = "\\A\\w{4,20}\\z";
+        if (uname.isEmpty())
+        {
+            email.setError("Field cannot be empty");
+            return false;
+        }
+        else if (uname.length() >= 15)
+        {
+            email.setError("Username too long");
+            return false;
+        }
+        else if (!uname.matches(noWhiteSpace))
+        {
+            email.setError("White Spaces are not allowed");
+            return false;
+        }
+        else
+        {
+            email.setError(null);
+            //username.setErrorEnabled(false);
+            return true;
+        }
+    }
 
     private Boolean validateName() {
         String fname = f_name.getText().toString();
@@ -165,7 +167,6 @@ public class student_signup extends AppCompatActivity {
                 "(?=.*[a-z])" +         //at least 1 lower case letter
                 "(?=.*[A-Z])" +         //at least 1 upper case letter
                 "(?=.*[a-zA-Z])" +      //any letter
-                "(?=.*[@#$%^&+=])" +    //at least 1 special character
                 "(?=\\S+$)" +           //no white spaces
                 ".{4,}" +               //at least 4 characters
                 "$";
@@ -196,20 +197,16 @@ public class student_signup extends AppCompatActivity {
     }
 
 
-    public void insertData(String fname, String lname, String std, String phone, String femail, String uname, String val) {
-        //SQLiteDatabase sqLiteDatabase=this.getWritableDatabase();
-        //sqLiteDatabase=SQLiteOpenHelper.g
-        //ContentValues values1 = new ContentValues();
-//        ContentValues values2 = new ContentValues();
-//
-//        values2.put("Firstname",fname);
-//        values2.put("LastName",lname);
-//        values2.put("Class",std);
-//        values2.put("Phone",phone);
-//        values2.put("Email",femail);
-//        values2.put("Username",uname);
-//        values2.put("Password",val);
-//        sqLiteDatabase.insert(TABLE_2,null,values2);
+    public void insertData(String fname, String lname,String femail, String phone,  String parent, String val) {
+        ContentValues values1 = new ContentValues();
+        ContentValues values2 = new ContentValues();
+
+        values2.put("Firstname",fname);
+        values2.put("LastName",lname);
+        values2.put("Phone",phone);
+        values2.put("Email",femail);
+        values2.put("Password",val);
+        sqLiteDatabase.insert(TABLE_2,null,values2);
 
     }
 }

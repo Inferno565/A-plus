@@ -121,7 +121,7 @@
                 android:textSize="20dp" />
 
             <Button
-                android:id="@+id/login"
+                android:id="@+id/submit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/frame"
