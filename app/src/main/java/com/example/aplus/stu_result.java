@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.components.XAxis;
@@ -26,10 +27,12 @@ import com.github.mikephil.charting.interfaces.datasets.IBarDataSet;
 
 import java.util.ArrayList;
 
-public class result extends Fragment {
+
+public class stu_result extends Fragment {
+
     private BarChart barChart;
-    private EditText uname;
-    private Button btn;
+    private TextView uname,em;
+
     private Cursor cursor;
     private SQLiteDatabase sqLiteDatabase;
     private SQLiteOpenHelper openHelper;
@@ -38,20 +41,25 @@ public class result extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
-        View view = inflater.inflate(R.layout.fragment_result, container, false);
+        View view = inflater.inflate(R.layout.fragment_stu_result, container, false);
          barChart = (BarChart) view.findViewById(R.id.barChart);
-        uname = (EditText) view.findViewById(R.id.f_name);
-         btn = (Button) view.findViewById(R.id.button);
+       uname = (TextView) view.findViewById(R.id.t1);
+         em = (TextView) view.findViewById(R.id.t2);
+        Bundle bundle =getArguments();
+        String username=bundle.getString("message_key1");
+        em.setText(username);
         openHelper = new DatabaseHelper(getContext());
         sqLiteDatabase = openHelper.getReadableDatabase();
+
         ArrayList<Integer> colors = new ArrayList<Integer>();
         colors.add(ContextCompat.getColor(getContext(), R.color.peach));
         colors.add(ContextCompat.getColor(getContext(), R.color.blue));
         colors.add(ContextCompat.getColor(getContext(), R.color.yellow));
         colors.add(ContextCompat.getColor(getContext(), R.color.green));
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        Cursor abc1 = sqLiteDatabase.rawQuery("Select FirstName from Student where Email='" + username + "'", null);
+        while (abc1.moveToNext()) {
+            uname.setText(abc1.getString(0));
+        }
                 queryXData();
                 queryYData();
                 final ArrayList<BarEntry> yvalue = new ArrayList<>();
@@ -67,7 +75,7 @@ public class result extends Fragment {
                 for (int i = 0; i < queryXData().size(); i++) {
                     xvalue.add(xdata.get(i));
                 }
-                BarDataSet dataSet = new BarDataSet(yvalue, "usernames");
+                BarDataSet dataSet = new BarDataSet(yvalue, "Subject");
 
                 dataSet.setColors(colors);
                 ArrayList<IBarDataSet> dataSets1 = new ArrayList<>();
@@ -84,33 +92,32 @@ public class result extends Fragment {
                 rightAxis.setEnabled(false);
                 barChart.setMaxVisibleValueCount(5);
                 barChart.setFitBars(true);
-            }
-        });
+
         return view;
     }
-        public ArrayList<String> queryXData () {
-            sqLiteDatabase = openHelper.getWritableDatabase();
-            ArrayList<String> XData = new ArrayList<String>();
-            Cursor abc = sqLiteDatabase.rawQuery("Select Username from Response where Subject='" + uname.getText().toString() + "' GROUP BY Username", null);
-            for (abc.moveToFirst(); !abc.isAfterLast(); abc.moveToNext()) {
-                XData.add(abc.getString(0));
-            }
-            //abc.close();
-            return XData;
+    public ArrayList<String> queryXData () {
+        sqLiteDatabase = openHelper.getWritableDatabase();
+        ArrayList<String> XData = new ArrayList<String>();
+        Cursor abc = sqLiteDatabase.rawQuery("Select Subject from Response where Username='" + uname.getText().toString() + "' GROUP BY Subject", null);
+        for (abc.moveToFirst(); !abc.isAfterLast(); abc.moveToNext()) {
+            XData.add(abc.getString(0));
         }
-
-        public ArrayList<String> queryYData () {
-            sqLiteDatabase = openHelper.getWritableDatabase();
-            ArrayList<String> YData = new ArrayList<String>();
-            Cursor abc = sqLiteDatabase.rawQuery("Select SUM (Score) from Response where Score IS NOT NULL and Subject='" + uname.getText().toString() + "'GROUP BY Username", null);
-
-            for (abc.moveToFirst(); !abc.isAfterLast(); abc.moveToNext()) {
-                YData.add(abc.getString(0));
-            }
-            //abc.close();
-            return YData;
-        }
-
-        // return rootview;
-
+        //abc.close();
+        return XData;
     }
+
+    public ArrayList<String> queryYData () {
+        sqLiteDatabase = openHelper.getWritableDatabase();
+        ArrayList<String> YData = new ArrayList<String>();
+        Cursor abc = sqLiteDatabase.rawQuery("Select SUM (Score) from Response where Score IS NOT NULL and Username='" + uname.getText().toString() + "'GROUP BY Subject", null);
+
+        for (abc.moveToFirst(); !abc.isAfterLast(); abc.moveToNext()) {
+            YData.add(abc.getString(0));
+        }
+        //abc.close();
+        return YData;
+    }
+
+    // return rootview;
+
+}

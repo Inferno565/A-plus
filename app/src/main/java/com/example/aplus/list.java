@@ -1,0 +1,1 @@
+package com.example.aplus;import android.app.Activity;import android.os.Bundle;public class list extends Activity {    protected void onCreate(Bundle savedInstanceState) {        super.onCreate(savedInstanceState);        setContentView(R.layout.activity_list);    }}

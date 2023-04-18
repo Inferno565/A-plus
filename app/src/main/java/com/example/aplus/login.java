@@ -42,6 +42,7 @@ public class login extends AppCompatActivity {
             public void onClick(View view) {
                 String password = pass1.getText().toString().trim();
                 String username = user.getText().toString().trim();
+
                 if (password.isEmpty() || username.isEmpty()) {
                     Toast.makeText(getApplicationContext(), "Enter your Email , UserName and Password to login", Toast.LENGTH_SHORT).show();
                 } else {
@@ -50,13 +51,13 @@ public class login extends AppCompatActivity {
                     if (cursor1 != null || cursor2 != null) {
                         if (cursor1.getCount() > 0) {
                             Intent intent = new Intent(getApplicationContext(), activity_student_dash.class);
-//                            intent.putExtra("message_key", username);
+                       intent.putExtra("message_key", username);
                             startActivity(intent);
                             Toast.makeText(getApplicationContext(), "Sign In Successful", Toast.LENGTH_SHORT).show();
 
                         } else if (cursor2.getCount() > 0) {
                             Intent intent = new Intent(getApplicationContext(), teacher_dash.class);
-//                            intent.putExtra("message_key", username);
+                            intent.putExtra("message_key", username);
                             startActivity(intent);
                             Toast.makeText(getApplicationContext(), "Sign In Successful", Toast.LENGTH_SHORT).show();
 

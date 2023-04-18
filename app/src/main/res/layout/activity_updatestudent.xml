@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="330dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginTop="30dp"
+    android:orientation="vertical"
+    tools:context=".updatestudent">
+
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/normal_corner"
+        android:hint="Email Address"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textColorHint="@color/hint_color"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/mob_no"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/normal_corner"
+        android:hint="Phone Number"
+        android:inputType="phone"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textColorHint="@color/hint_color"
+        android:textSize="20dp" />
+       <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/pass"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/normal_corner"
+            android:hint="Password"
+            android:paddingEnd="20dp"
+            android:password="true"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/hint_color"
+            android:textSize="20dp" />
+
+        <ImageButton
+            android:id="@+id/visi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@id/pass"
+            android:layout_marginTop="23dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/view" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/pass_re"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/normal_corner"
+        android:hint="Confirm Password"
+        android:paddingEnd="20dp"
+        android:password="true"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textColorHint="@color/hint_color"
+        android:textSize="20dp"
+        />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/frame"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/gradient_1"
+        android:text="Update Profile"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/del"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/frame"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/gradient_1"
+        android:text="Delete My Account"
+        android:textSize="20dp" />
+    <TextView
+        android:id="@+id/txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+</LinearLayout>

@@ -26,6 +26,8 @@ public class teacher_dash extends AppCompatActivity {
         b2 = (ImageButton) findViewById(R.id.bt2);
         b3 = (ImageButton) findViewById(R.id.bt3);
         b4 = (ImageButton) findViewById(R.id.bt4);
+        Intent intent1 = getIntent();
+        String username = intent1.getStringExtra("message_key");
         test.setArguments(intent.getExtras());
         getSupportFragmentManager().beginTransaction().replace(R.id.frag1, frag).commit();
         b1.setOnClickListener(new View.OnClickListener() {
@@ -53,8 +55,10 @@ public class teacher_dash extends AppCompatActivity {
         b4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                getSupportFragmentManager().beginTransaction().replace(R.id.frag1, pro_fag).commit();
+                Bundle bundle = new Bundle();
+                bundle.putString("message_key1", username); // Put anything what you want
+                getSupportFragmentManager().beginTransaction().replace(R.id.frag1,pro_fag).commit();
+                pro_fag.setArguments(bundle);
             }
         });
     }

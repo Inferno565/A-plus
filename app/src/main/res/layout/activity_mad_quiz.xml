@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8BC2C8"
+    android:orientation="vertical"
+    tools:context=".MAD_quiz">
+
+    <TextView
+        android:id="@+id/sub1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="MAD"
+        android:textColor="@color/hint_color"
+        android:textSize="20dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/sub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:text="MAD"
+        android:textColor="@color/hint_color"
+        android:textSize="50dp" />
+
+    <TextView
+        android:id="@+id/ques"
+        android:layout_width="256dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="150dp"
+        android:text="TextView"
+        android:textColor="@color/hint_color"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="166dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="20dp"
+        android:outlineAmbientShadowColor="@color/hint_color"
+        android:outlineSpotShadowColor="@color/hint_color">
+
+        <RadioButton
+            android:id="@+id/op1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="@color/hint_color"
+            android:textSize="25dp">
+
+        </RadioButton>
+
+        <RadioButton
+            android:id="@+id/op2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="@color/hint_color"
+            android:textSize="25dp">
+
+        </RadioButton>
+
+        <RadioButton
+            android:id="@+id/op3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="@color/hint_color"
+            android:textSize="25dp">
+
+        </RadioButton>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/light_blue_A400"
+        android:padding="10dp"
+        android:text="SUBMIT"
+        android:textColor="@color/hint_color"
+        android:textSize="25dp" />
+
+    <Button
+        android:id="@+id/nex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/light_blue_900"
+        android:padding="10dp"
+        android:text="Next"
+        android:textColor="@color/hint_color"
+        android:textSize="25dp" />
+
+</LinearLayout>

@@ -13,4 +13,9 @@
     <color name="light_blue_A200">#FF40C4FF</color>
     <color name="light_blue_A400">#FF00B0FF</color>
     <color name="black_overlay">#66000000</color>
+    <color name="peach">#FF9A62</color>
+    <color name="green">#5F9EA0</color>
+    <color name="yellow">#FFFBC1</color>
+    <color name="pink">#F7A4A4</color>
+    <color name="blue">#151965</color>
 </resources>
